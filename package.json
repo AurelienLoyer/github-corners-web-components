@@ -1,10 +1,10 @@
 {
-  "name": "vue-web-component-project",
+  "name": "github-corners-web-components",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target wc --name github-corners ./src/entrypoint.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
