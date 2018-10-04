@@ -1,4 +1,4 @@
-# vue-web-component-project
+# Github 🐙 Corners 📐 Web Components 🥑
 
 ## Project setup
 ```

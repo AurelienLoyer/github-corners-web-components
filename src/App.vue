@@ -1,17 +1,14 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <GithubCorners href="https://github.com/T3kstiil3" side="right" color="white" fill="black"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GithubCorners from './components/GithubCorners.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    GithubCorners
   }
 }
 </script>
