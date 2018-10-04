@@ -27,10 +27,18 @@
             width: 90%;
             max-width: 800px;
             margin: auto;
+            padding-bottom: 100px;
+            font-weight: bold;
         }
 
         ul {
             list-style: none;
+        }
+
+        pre {
+            text-align: left;
+            background: #eeeeee;
+            padding: 35px;
         }
     </style>
 </head>
@@ -39,7 +47,7 @@
 
     <script src="https://unpkg.com/vue"></script>
     <script src="dist/github-corners.js"></script>
-    <github-corners href="https://github.com/T3kstiil3" side="right" color="white" fill="#FF9800"></github-corners>
+    <github-corners href="https://github.com/T3kstiil3/github-corners-web-component" side="right" color="white" fill="#FF9800"></github-corners>
 
 
     <h1>Github 🐙 Corners 📐 Web Components 🥑</h1>
@@ -50,10 +58,35 @@
 
         <script src="https://gist.github.com/T3kstiil3/ddfabddbcaf10708ace03a0e45714845.js"></script>
 
-        <h2 title="Configure">🎨</h2>
+        <h2 title="Configure">🛠</h2>
+
+        <pre>
+        Attributes:
+        
+            href
+                values: ...
+                default: https://github.com/T3kstiil3/github-corners-web-component
+            side
+                values: left || right
+                default: left
+            
+            position
+                values: fixed || absolute
+                default: fixed
+            
+            color
+                values: white || #FF9800 || ...
+                default: white
+            
+            fill
+                values: white || #FF9800 || ...
+                default: black
+        </pre>
+
+        <h2 title="Generate">🎨</h2>
 
         <div class="preview">
-            
+
         </div>
 
         <h2 title="Problem ?">👨🏻‍🔧</h2>
@@ -64,9 +97,9 @@
 
         <h2 title="Thanks">👍</h2>
 
-        svg <a target="_blank" href="https://github.com/tholman/github-corners">@tholman</a><br>
-        tips <a target="_blank" href="https://medium.com/js-dojo/create-publish-web-components-with-vue-cli-3-26f9cfb6583b">@anthonygore</a><br>
-            
+        Svg <a target="_blank" href="https://github.com/tholman/github-corners">@tholman</a><br>
+        Tips <a target="_blank" href="https://medium.com/js-dojo/create-publish-web-components-with-vue-cli-3-26f9cfb6583b">@anthonygore</a><br>
+
     </div>
 
 
