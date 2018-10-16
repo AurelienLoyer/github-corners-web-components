@@ -6,13 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>GitHub Corners Web Components</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <style>
+        @import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/848d6580/stylesheets/monokai.css');
+
+        svg {
+            transition: all 0.2s;
+        }
+
         html,
         body {
             text-align: center;
-            font-family: 'Lato', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            background: #272822;
+            color: whitesmoke;
         }
 
         h1 {
@@ -36,6 +44,11 @@
         }
 
         pre {
+            display: none;
+        }
+
+        a {
+            color: goldenrod;
             text-align: left;
             background: #eeeeee;
             padding: 35px;
@@ -43,15 +56,16 @@
             word-wrap: break-word;
         }
     </style>
+
 </head>
 
 <body>
 
     <script src="https://unpkg.com/vue"></script>
     <script src="dist/github-corners.js"></script>
-    <github-corners href="https://github.com/T3kstiil3/github-corners-web-component" side="right" color="white" fill="#FF9800"></github-corners>
+    <github-corners href="https://github.com/T3kstiil3/github-corners-web-component" side="right" color="#272822" fill="#FF9800"></github-corners>
 
-    <h1>Github 🐙 Corners 📐 Web Components 🥑</h1>
+    <h1>✨ Github 🐙 Corners 📐 Web Components 🎉</h1>
 
     <div class="content">
 
@@ -60,6 +74,8 @@
         <script src="https://gist.github.com/T3kstiil3/ddfabddbcaf10708ace03a0e45714845.js"></script>
 
         <h2 title="Configure">🛠</h2>
+
+        <script src="https://gist.github.com/T3kstiil3/185d38fe1c9b420a6313b00e82f6c277.js"></script>
 
         <pre>
         Attributes:
