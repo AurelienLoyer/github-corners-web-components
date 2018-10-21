@@ -1,0 +1,115 @@
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/848d6580/stylesheets/monokai.css');
+svg {
+    transition: all 0.2s;
+}
+
+html,
+body {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background: #272822;
+    color: whitesmoke;
+}
+
+h1 {
+    margin: 200px 0;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+.content {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding-bottom: 100px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+textarea {
+    text-align: left;
+    background: #272822;
+    border: solid 1px #f7f7f7;
+    padding: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: calc(100% - 40px);
+    color: whitesmoke;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+a {
+    color: goldenrod;
+}
+
+#generator {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 20px auto;
+    width: 300px;
+    position: relative;
+    z-index: 0;
+}
+
+#generator label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#generator label .label {
+    margin-right: 10px;
+}
+
+#generator label .select {
+    position: relative;
+    width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid white;
+    padding: 0;
+}
+
+#generator label .select::after {
+    content: "🦄";
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+#generator label .select select {
+    cursor: pointer;
+    flex: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: white;
+    border-radius: 0;
+    padding: 10px 15px;
+}

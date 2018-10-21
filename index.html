@@ -7,56 +7,7 @@
     <title>GitHub Corners Web Components</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-    <style>
-        @import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/848d6580/stylesheets/monokai.css');
-
-        svg {
-            transition: all 0.2s;
-        }
-
-        html,
-        body {
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            background: #272822;
-            color: whitesmoke;
-        }
-
-        h1 {
-            margin: 200px 0;
-        }
-
-        h2 {
-            font-size: 3em;
-        }
-
-        .content {
-            width: 90%;
-            max-width: 800px;
-            margin: auto;
-            padding-bottom: 100px;
-            font-weight: bold;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        pre {
-            display: none;
-            text-align: left;
-            background: #eeeeee;
-            padding: 35px;
-            white-space: pre-wrap; 
-            word-wrap: break-word;
-        }
-
-        a {
-            color: goldenrod;
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -83,36 +34,36 @@
 
         <script src="https://gist.github.com/T3kstiil3/185d38fe1c9b420a6313b00e82f6c277.js"></script>
 
-        <pre>
-        Attributes:
-        
-            href
-                values: ...
-                default: https://github.com/T3kstiil3/github-corners-web-component
-            side
-                values: left || right
-                default: left
-            
-            position
-                values: fixed || absolute
-                default: fixed
-            
-            color
-                values: white || #FF9800 || ...
-                default: white
-            
-            fill
-                values: white || #FF9800 || ...
-                default: black
-        </pre>
-
         <h2 title="Generate">🎨</h2>
 
-        <p>SOON</p>
+        <p>Generator</p>
 
-        <div class="preview">
+        <form id="generator">
 
-        </div>
+            <label for="side">
+                <span class="label">Side position :</span>
+                <span class="select">
+                    <select name="side" id="side">
+                        <option value="right">right</option>
+                        <option value="left">left</option>
+                    </select>
+                </span>
+            </label>
+
+            <label for="position">
+                <span class="label">Position :</span>
+                <span class="select">
+                    <select name="position" id="position">
+                        <option value="fixed">fixed</option>
+                        <option value="absolute">absolute</option>
+                        <option value="relative">relative</option>
+                    </select>
+                </span>
+            </label>
+            
+        </form>
+
+        <textarea id="demo"></textarea>
 
         <h2 title="Problem ?">👨🏻‍🔧</h2>
 
@@ -140,6 +91,27 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-127057625-1');
+    </script>
+
+    <script>
+        var form = document.getElementById("generator");
+        var corner = document.getElementsByTagName('github-corners')[0];
+
+        console.log(corner);
+        changePreContent();
+
+        form.addEventListener("input", function () {
+            for (var i = 0; i < form.elements.length; i++) {
+                var item = form.elements.item(i);
+                corner.setAttribute(item.getAttribute('name'), item.value)
+            }
+
+            changePreContent();
+        });
+
+        function changePreContent() {
+            document.getElementById('demo').value = corner.outerHTML;
+        }
     </script>
 
 
